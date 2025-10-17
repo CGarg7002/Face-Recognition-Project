@@ -395,7 +395,8 @@ class Application:
             if ret:
                 temp_rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                 temp_locs = face_recognition.face_locations(temp_rgb_frame)
-                if len(temp_locs) > 1:
+                if len(temp_locs) > 0:
+                    # If there are faces detected, process the frame
                     # 1. Process the frame using the recognition module
                     processed_frame, status = recognitions.process_frame_for_attendance(
                         frame,
@@ -406,6 +407,9 @@ class Application:
                     # Update status message based on recognition result
                     if status:
                         self.status_message.set(f"Recognition: {status}")
+
+                    # 2. Convert the OpenCV image (BGR) to RGB
+                    processed_frame = cv2.cvtColor(processed_frame, cv2.COLOR_BGR2RGBA)
 
                     # 2. Convert the OpenCV image (BGR) to RGB
                     cv2image = cv2.cvtColor(processed_frame, cv2.COLOR_BGR2RGBA)
