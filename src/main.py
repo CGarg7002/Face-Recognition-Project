@@ -87,8 +87,8 @@ class Application:
         encodings = face_recognition.face_encodings(img)[0]
 
         if not os.path.exists(self.encodings_path):
-            print(f"Encodings file not found: {self.encodings_path}")
-            return
+            with open(self.encodings_path, "wb") as f:
+                pickle.dump({}, f)
 
         try:
             with open(self.encodings_path, "rb") as f:
@@ -447,7 +447,7 @@ class Application:
                         self.camera_label.image = self.current_frame_img
 
             # Schedule the next call to video_loop after 15 milliseconds (~66 FPS)
-            self.master.after(15, self.video_loop)
+            self.master.after(30, self.video_loop)
 
         except Exception as e:
             # Handle error if camera fails to initialize or process

@@ -44,19 +44,19 @@ def process_frame_for_attendance(frame, known_names, known_encodings):
         if name != "Unknown":
             cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)
             cv2.rectangle(
-                frame, (left, bottom - 35), (right, bottom), (0, 255, 0), cv2.FILLED
+                frame, (left, bottom + 35), (right, bottom), (0, 255, 0), cv2.FILLED
             )
         else:
             cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 0), 2)
             cv2.rectangle(
-                frame, (left, bottom - 35), (right, bottom), (0, 0, 0), cv2.FILLED
+                frame, (left, bottom + 35), (right, bottom), (0, 0, 0), cv2.FILLED
             )
 
         # Annotate the name on the frame
         cv2.putText(
             frame,
             name,
-            (left + 6, bottom - 6),
+            (left + 6, bottom + 12),
             cv2.FONT_HERSHEY_SIMPLEX,
             0.5,
             (255, 255, 255),

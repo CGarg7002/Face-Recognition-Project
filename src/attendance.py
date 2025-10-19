@@ -25,6 +25,13 @@ def add_to_attendance(name):
     # Read existing attendance data
     df = pd.read_csv(attendance_file, index_col=0)
 
+    # Get today's date
+    today = datetime.date.today().strftime("%Y-%m-%d")
+
+    # Update today's date column
+    if today not in df.columns:
+        df[today] = 0  # Initialize with 0 if the column doesn't exist
+
     # Create a new entry
     if name not in df.index:
         df.loc[name] = [0] * len(df.columns)  # Initialize with empty values
