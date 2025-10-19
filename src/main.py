@@ -370,6 +370,15 @@ class Application:
         # --- Video Capture Initialization ---
         # 0 typically refers to the default camera. Change this if needed.
         self.cap = cv2.VideoCapture(0)
+
+        # Check if the camera opened successfully
+        if not self.cap.isOpened():
+            self.status_message.set(
+                "ERROR: Camera failed to open. Check index/permissions."
+            )
+        else:
+            self.status_message.set("Camera initialized. Waiting for face...")
+
         # We need a reference to the PhotoImage to prevent garbage collection
         self.current_frame_img = None
 
@@ -388,6 +397,10 @@ class Application:
 
     def video_loop(self):
         """Captures a frame, processes it, and updates the Tkinter label."""
+        # Only attempt to read if the camera is open
+        if not self.cap.isOpened():
+            self.master.after(1000, self.video_loop)  # Retry loop after 1 second
+            return
         try:
             # Read frame from the camera
             ret, frame = self.cap.read()
