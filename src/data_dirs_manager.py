@@ -2,7 +2,6 @@ from appdirs import AppDirs
 import os
 
 APP_NAME = "Attendance System"
-APP_AUTHOR = "Chirag Garg"
 
 
 def get_app_data_dir():
@@ -15,8 +14,8 @@ def get_app_data_dir():
     - Linux:   /home/<User>/.local/share/<AppName>
     - macOS:   /Users/<User>/Library/Application Support/<AppName>
     """
-    # Initialize AppDirs with your application's name and author
-    dirs = AppDirs(APP_NAME, APP_AUTHOR)
+    # Initialize AppDirs with your application's name
+    dirs = AppDirs(APP_NAME)
 
     # Get the path for user-specific data
     data_dir = dirs.user_data_dir
