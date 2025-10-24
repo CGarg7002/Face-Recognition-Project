@@ -9,6 +9,7 @@ A fully deployable desktop application which I initially built for my university
 - **Add & Remove**: Functionality to add and remove an entity from the database.
 
 ![\CGarg7002\Attendance_via_Face_Recognition_System\screenshots\face_recog13.png](https://raw.githubusercontent.com/GargEngineers7002/Attendance_via_Face_Recognition_System/40f71cade13c8138307dab5a79f46c5731d38dab/screenshots/face_recog13.png)
+![\CGarg7002\Attendance_via_Face_Recognition_System\screenshots\face_recog12.png](https://raw.githubusercontent.com/GargEngineers7002/Attendance_via_Face_Recognition_System/40f71cade13c8138307dab5a79f46c5731d38dab/screenshots/face_recog12.png)
 - **Current Status**: This Feature allows you to see all the actions the application is performing under the hood, like in the above images it showed that a face has been recognized and whether that face is registered in the database or not.
 
 ![\CGarg7002\Attendance_via_Face_Recognition_System\screenshots\face_recog14.png](https://raw.githubusercontent.com/GargEngineers7002/Attendance_via_Face_Recognition_System/refs/heads/main/screenshots/face_recog14.png)
@@ -89,5 +90,6 @@ This project demonstrates:
 - `video_loop()` function in `main.py` cuts in the processing of the frame if no face has been detected.
 
 ---
+
 
 ⭐ **Star this project if you found it helpful!**
