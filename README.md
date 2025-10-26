@@ -51,9 +51,9 @@ conda activate face_rec_env
 
 ### 3. 📦 Packaging (Standalone Executable)
 ```bash
-pyinstaller --onefile --windowed src/main.py
+pyinstaller main.spec
 ```
-- The final standalone .exe file will be found in the ```Attendance System/dist/``` folder.
+- The final standalone .exe file will be found in the ```dist/``` folder.
 
 ## 📁 Project Files
 
