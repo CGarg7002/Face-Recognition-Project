@@ -1,15 +1,14 @@
 # -*- mode: python ; coding: utf-8 -*-
 import os
-import dlib
 
-# Dynamically find the path to dlib's data files
-dlib_data_path = os.path.join(dlib.__path__[0], '*.*')
+# NEW: Import PyInstaller's utility
+from PyInstaller.utils.hooks import collect_data_files
 
 a = Analysis(
     ['src\\main.py'],
     pathex=[],
     binaries=[],
-    datas=[(dlib_data_path, 'dlib')],
+    datas=collect_data_files('dlib') + collect_data_files('face_recognition_models'),
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

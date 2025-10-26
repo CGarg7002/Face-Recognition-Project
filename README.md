@@ -26,8 +26,8 @@ A fully deployable desktop application which I initially built for my university
 ![\CGarg7002\Attendance_via_Face_Recognition_System\screenshots\face_recog16.png](https://raw.githubusercontent.com/GargEngineers7002/Attendance_via_Face_Recognition_System/refs/heads/main/screenshots/face_recog16.png)
 - **Storage**: The application data is stored in the following directories on your device:
     - **Windows**:``` C:\Users\10\AppData\Local\Attendance System\Attendance System ```
-    - **Linux**:``` ~/Library/Application Support/Attendance System/Attendance System ```
-    - **Mac**:``` ~/.local/share/Attendance System/Attendance System ```
+    - **Linux**:``` ~/.local/share/Attendance System/Attendance System ```
+    - **Mac**:``` ~/Library/Application Support/Attendance System/Attendance System ```
 
 ## 🛠️🚀 🛠️ Quick Setup
 
