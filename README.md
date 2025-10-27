@@ -29,7 +29,7 @@ A fully deployable desktop application which I initially built for my university
     - **Linux**:``` ~/.local/share/Attendance System/Attendance System ```
     - **Mac**:``` ~/Library/Application Support/Attendance System/Attendance System ```
 
-## 🛠️🚀 🛠️ Quick Setup
+## 🛠️🚀  Quick Setup
 
 This project uses an `environment.yml` file, so **Conda** (or Miniconda) is the simplest way to manage dependencies.
 
@@ -93,3 +93,4 @@ This project demonstrates:
 
 
 ⭐ **Star this project if you found it helpful!**
+
